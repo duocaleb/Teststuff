@@ -33,33 +33,100 @@ public class Sketch extends PApplet {
     line(50, 125, 70, 50);  
 */
     draw_section_outlines();
+    draw_section1();
+    draw_section2();
+    draw_section3();
+    draw_section4();
 
     
   }
 
-  /*
-def draw_section_outlines():
-    # Draw squares on bottom
-    arcade.draw_rectangle_outline(150, 150, 300, 300, arcade.color.BLACK)
-    arcade.draw_rectangle_outline(450, 150, 300, 300, arcade.color.BLACK)
-    arcade.draw_rectangle_outline(750, 150, 300, 300, arcade.color.BLACK)
-    arcade.draw_rectangle_outline(1050, 150, 300, 300, arcade.color.BLACK)
 
-    # Draw squares on top
-    arcade.draw_rectangle_outline(150, 450, 300, 300, arcade.color.BLACK)
-    arcade.draw_rectangle_outline(450, 450, 300, 300, arcade.color.BLACK)
-    arcade.draw_rectangle_outline(750, 450, 300, 300, arcade.color.BLACK)
-    arcade.draw_rectangle_outline(1050, 450, 300, 300, arcade.color.BLACK)
-  */
-
+  /**
+   * Draw the outlines for all sections
+   */
   public void draw_section_outlines(){
     stroke(0);
-    rect(150, 150, 300, 300);
-    rect(450, 150, 300, 300);
-    rect(750, 150, 300, 300);
-    rect(1050, 150, 300, 300);
-    
+    noFill();
+
+    // draw bottom row boxes
+    rect(0,300, 300, 300);
+    rect(300, 300, 300, 300);
+    rect(600, 300, 300, 300);
+    rect(900, 300, 300, 300);
+
+    // draw top row boxes
+    rect(0,0, 300, 300);
+    rect(300, 0, 300, 300);
+    rect(600, 0, 300, 300);
+    rect(900, 0, 300, 300);
   }
   
-  // define other methods down here.
+  /**
+   * draws the bottom left section
+   */
+  public void draw_section1(){
+    int intX = 0;
+    int intY = 0;
+
+    for(int intRow = 0; intRow < 30; intRow++){
+      for(int intColumn = 0; intColumn < 30; intColumn++){
+        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+      }
+    }
+  }
+
+  /**
+   * Use the modulus operator and an if statement to select the color
+   * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
+   */
+  public void draw_section2(){
+
+  }
+
+  /**
+   * Use the modulus operator and an if/else statement to select the color.
+   * Don't use multiple 'if' statements.
+   */
+  public void draw_section3(){
+
+  }
+
+  /**
+   * Use the modulus operator and just one 'if' statement to select the color.
+   */
+  public void draw_section4(){
+
+  }
+
+  /**
+   * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
+   */
+  public void draw_section5(){
+
+  }
+
+  public void draw_section6(){
+
+  }
+
+  public void draw_section7(){
+
+  }
+  
+  public void draw_section8(){
+
+  }
+
+
+
+
+
+
 }
