@@ -37,6 +37,11 @@ public class Sketch extends PApplet {
     draw_section2();
     draw_section3();
     draw_section4();
+	  
+    draw_section5();
+    draw_section6();
+    draw_section7();
+    draw_section8();
 
     
   }
