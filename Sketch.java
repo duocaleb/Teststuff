@@ -100,7 +100,25 @@ public class Sketch extends PApplet {
    * Don't use multiple 'if' statements.
    */
   public void draw_section3(){
+    int intX = 0;
+    int intY = 0;
 
+    for(int intRow = 0; intRow < 30; intRow++){
+      for(int intColumn = 0; intColumn < 30; intColumn++){
+        intX = 600 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        if (intRow % 2 == 0){
+          fill(225);
+        }
+        else{
+          fill(0);
+        }
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+      }
+    }
   }
 
   /**
