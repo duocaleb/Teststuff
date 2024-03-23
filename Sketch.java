@@ -76,9 +76,8 @@ public class Sketch extends PApplet {
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+        intX = 3 + intColumn*10; 
+        intY = 300 + 3 + intRow*10; 
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
@@ -87,19 +86,14 @@ public class Sketch extends PApplet {
     }
   }
 
-  /**
-   * Use the modulus operator and an if statement to select the color
-   * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
-   */
   public void draw_section2(){
     int intX = 0;
     int intY = 0;
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 300 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+        intX = 300 + 3 + intColumn*10; 
+        intY = 300 + 3 + intRow*10; 
         if (intColumn % 2 == 0){
           fill(225);
         }
@@ -113,18 +107,15 @@ public class Sketch extends PApplet {
     }
   }
 
-  /**
-   * Use the modulus operator and an if/else statement to select the color.
-   * Don't use multiple 'if' statements.
-   */
+
   public void draw_section3(){
     int intX = 0;
     int intY = 0;
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 600 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 600 + 3 + intColumn*10;
+        intY = 300 + 3 + intRow*10;
 
         if (intRow % 2 == 0){
           fill(0);
@@ -139,17 +130,15 @@ public class Sketch extends PApplet {
     }
   }
 
-  /**
-   * Use the modulus operator and just one 'if' statement to select the color.
-   */
+
   public void draw_section4(){
     int intX = 0;
     int intY = 0;
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 900 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        intX = 900 + 3 + intColumn*10;
+        intY = 300 + 3 + intRow*10;
 
         if (intColumn % 2 == 1 || intRow % 2 == 0){
           fill(0);
@@ -164,18 +153,14 @@ public class Sketch extends PApplet {
     }
   }
 
-  /**
-   * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
-   */
   public void draw_section5(){
     int intX = 0;
     int intY = 0;
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+        intX = 3 + intColumn*10; 
+        intY = 3 + intRow*10; 
         fill(255);
         noStroke();
         //Note: the 30 below should be 29 for equality, it is only there to match the assignment.
@@ -192,9 +177,8 @@ public class Sketch extends PApplet {
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 300 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+        intX = 300 + 3 + intColumn*10; 
+        intY = 3 + intRow*10; 
         fill(255);
         noStroke();
         if (intColumn <= intRow){
@@ -210,9 +194,8 @@ public class Sketch extends PApplet {
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 600 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+        intX = 600 + 3 + intColumn*10; 
+        intY = 3 + intRow*10; 
         fill(255);
         noStroke();
         if (intColumn <= 29-intRow){
@@ -228,9 +211,8 @@ public class Sketch extends PApplet {
 
     for(int intRow = 0; intRow < 30; intRow++){
       for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 900 + 3 + intColumn*10;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 3 + intRow*10; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+        intX = 900 + 3 + intColumn*10; 
+        intY = 3 + intRow*10; 
         fill(255);
         noStroke();
         if (intColumn >= intRow){
