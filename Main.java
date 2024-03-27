@@ -9,7 +9,7 @@ class Main {
   public static void main(String[] args) {
     
     String[] processingArgs = {"MySketch"};
-	  Sketch mySketch = new Sketch();
+	  Square mySketch = new Square();
 	  PApplet.runSketch(processingArgs, mySketch);
   }
   
