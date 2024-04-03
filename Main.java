@@ -1,5 +1,5 @@
 import processing.core.PApplet;
-
+import java.util.Scanner;
 /**
  * Main class to execute sketch
  * @author 
@@ -7,10 +7,12 @@ import processing.core.PApplet;
  */
 class Main {
   public static void main(String[] args) {
-    
+    Scanner s = new Scanner(System.in); 
     String[] processingArgs = {"MySketch"};
-	  Square mySketch = new Square();
-	  PApplet.runSketch(processingArgs, mySketch);
+	  Cube Cube = new Cube();
+    Square Square = new Square();
+    CubeTest CubeTest = new CubeTest();
+    PApplet.runSketch(processingArgs, CubeTest);
   }
   
 }
