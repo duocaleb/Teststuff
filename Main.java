@@ -12,6 +12,7 @@ class Main {
 	  Cube Cube = new Cube();
     Square Square = new Square();
     CubeTest CubeTest = new CubeTest();
+    tester tester = new tester();
     PApplet.runSketch(processingArgs, CubeTest);
   }
   
