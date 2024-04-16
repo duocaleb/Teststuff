@@ -6,9 +6,6 @@ import java.util.*;
  * Actually, i didn't even relise java proccessing had 3d capabilities, so i made my own renderer.
  * 
  * Out of all the code here, only Arrays.sort(faceListStored, (a, b) -> Double.compare(a[4],b[4])); is taken from the internet
- * 
- * This is made for only a rubik's cube, but is made to be more general with minor changes, so a lot of the code uses variables that are not 
- * nessecary for this project, but would help if it were changed.
  *  
  * Enjoy the project
  * 
