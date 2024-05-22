@@ -14,9 +14,8 @@ import java.util.List;
 */
 public class Rendering extends PApplet {
   //initalizing the variables and the arrays
-  double dblFocalLength = 100;
+  double dblFocalLength = 500;
   int intScreenSize = 800;
-  // I dont really have one rn
   double cameraX = 0;
   double cameraY = 0;
   double cameraZ = 0;
@@ -241,14 +240,14 @@ public class Rendering extends PApplet {
       double[] y = {TriangleList3D.get(a).p1.y, TriangleList3D.get(a).p2.y, TriangleList3D.get(a).p3.y};
       int pOut = 0;
       for(int count = 0; count < 3; count++){
-        if(x[count] > ((intScreenSize*(z[count]-cameraZ))/(2*dblFocalLength)) || y[count] > ((intScreenSize*(z[count]-cameraZ))/(2*dblFocalLength)) || x[count] < -((intScreenSize*(z[count]-cameraZ))/(2*dblFocalLength)) || y[count] < -((intScreenSize*(z[count]-cameraZ))/(2*dblFocalLength))){
+        if(x[count] > ((intScreenSize*(z[count]))/(dblFocalLength)) || y[count] > ((intScreenSize*(z[count]-cameraZ))/(dblFocalLength)) || x[count] < -((intScreenSize*(z[count]-cameraZ))/(dblFocalLength)) || y[count] < -((intScreenSize*(z[count]-cameraZ))/(2*dblFocalLength))){
           pOut++;
         }
         //Implement real projection later
-        x[count] = -(((x[count]-cameraX) * (dblFocalLength)) / ((z[count]-cameraZ)) + x[count] - cameraX);
+        x[count] = -(((x[count]-cameraX) * (dblFocalLength)) / ((z[count]-cameraZ)));
         // Got this from -(x[count]-cameraX)*(dblFocalLength+z[count]-cameraZ)/(z[count]-cameraZ). 
         // Obviously wrong cause its clear this aproaches a value and doesnt get infinitly small as the camera gets further away.
-        y[count] = -(((y[count]-cameraY) * (dblFocalLength)) / ((z[count]-cameraZ)) + y[count] - cameraY);
+        y[count] = -(((y[count]-cameraY) * (dblFocalLength)) / ((z[count]-cameraZ)));
       }
       //Implement real culling later
       if(pOut < 1){
